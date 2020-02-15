@@ -8,6 +8,7 @@ router.register(r'users', views.UserViewSet)
 router.register(r'groups', views.GroupViewSet)
 router.register(r'posts', views.PostViewSet)
 router.register(r'authors', views.AuthorViewSet)
+router.register(r'authors-posts', views.DetailsViewSet)
 
 
 
