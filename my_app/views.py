@@ -1,7 +1,7 @@
 from django.contrib.auth.models import User, Group
 from rest_framework import viewsets
-from .models import Post
-from my_app.serializers import PostSerializer, UserSerializer, GroupSerializer
+from .models import Post, Author
+from my_app.serializers import PostSerializer, UserSerializer, GroupSerializer, AuthorSerializer
 
 
 # Create your views here.
@@ -25,3 +25,9 @@ class GroupViewSet(viewsets.ModelViewSet):
 class PostViewSet(viewsets.ModelViewSet):
     queryset = Post.objects.all()
     serializer_class = PostSerializer
+
+
+class AuthorViewSet(viewsets.ModelViewSet):
+    queryset = Author.objects.all()
+    serializer_class = AuthorSerializer
+
